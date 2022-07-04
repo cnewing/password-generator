@@ -1,7 +1,61 @@
-var uppercase = ["A", "B", "C", "D"];
-var lowercase = ["a", "b", "c", "d"];
-var number = ["1", "2", "3", "4", "5"];
-var symbol = ["!", "@", "#", "$"];
+var uppercase = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+];
+var lowercase = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "j",
+  "k",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "w",
+  "x",
+  "y",
+  "z",
+];
+var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "?"];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -36,6 +90,7 @@ function generatePassword() {
     alert("Must choose at least one character type");
     return;
   }
+
   var userCharacters = [];
 
   if (useUpperCase === true) {
@@ -54,7 +109,12 @@ function generatePassword() {
     userCharacters = userCharacters.concat(symbol);
   }
 
-  console.log(userCharacters);
+  for (let i = 0; i <= passwordLength; i++) {
+    let randomPassword = Math.floor(Math.random() * userCharacters.length);
+
+    password + userCharacters.substring(randomPassword, randomPassword + 1);
+    console.log(password);
+  }
 }
 
 // Write password to the #password input
