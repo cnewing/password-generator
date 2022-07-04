@@ -111,9 +111,7 @@ function generatePassword() {
 
   for (let i = 0; i <= passwordLength; i++) {
     let randomPassword = Math.floor(Math.random() * userCharacters.length);
-
-    password + userCharacters.substring(randomPassword, randomPassword + 1);
-    console.log(password);
+    console.log(randomPassword);
   }
 }
 
